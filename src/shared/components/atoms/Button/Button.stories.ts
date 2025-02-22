@@ -4,7 +4,7 @@ import { Button } from './Button';
 import { ButtonProps, ButtonSize, ButtonVariant } from './Button.type';
 
 const meta: Meta<ButtonProps> = {
-  title: 'Components/Atoms/Button',
+  title: 'Atoms/Action/Button',
   component: Button,
   parameters: {
     layout: 'centered',
@@ -46,10 +46,9 @@ const meta: Meta<ButtonProps> = {
 
 export default meta;
 
-export const Primary: StoryObj<ButtonProps> = {
+export const Default: StoryObj<ButtonProps> = {
   args: {
     label: 'Button',
-    variant: 'primary',
   },
 };
 

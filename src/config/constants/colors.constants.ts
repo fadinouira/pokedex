@@ -1,0 +1,15 @@
+export const COLORS_TOKENS = [
+  'brand-primary',
+  'brand-primary-hover',
+  'brand-primary-foreground',
+  'brand-primary-disabled',
+  'bg-default',
+  'bg-light',
+  'text-default',
+  'text-muted',
+  'text-disabled',
+  'text-label',
+  'border-default',
+  'border-muted',
+  'border-disabled',
+] as const;
