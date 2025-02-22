@@ -3,4 +3,6 @@ export const common = {
   welcome: 'Bienvenue',
   random: 'Aléatoire',
   search: 'Rechercher',
+
+  not_found: 'Non trouvé',
 };

@@ -4,15 +4,15 @@ import { initReactI18next } from 'react-i18next';
 import { en } from './en';
 import { fr } from './fr';
 
-i18n.use(initReactI18next).init({
+const localeConfig = i18n.createInstance();
+
+localeConfig.use(initReactI18next).init({
   resources: {
-    en,
-    fr,
+    [LocalesIdEnum.EN]: { translation: en },
+    [LocalesIdEnum.FR]: { translation: fr },
   },
   lng: LocalesIdEnum.EN,
   fallbackLng: LocalesIdEnum.FR,
-
-  interpolation: {
-    escapeValue: false,
-  },
 });
+
+export default localeConfig;

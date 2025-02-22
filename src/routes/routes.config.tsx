@@ -1,4 +1,5 @@
 import { RouteIdEnum } from '@/config';
+import { NotFoundPage } from '@/pages';
 import { Navigate, RouteObject } from 'react-router';
 
 export const RoutesConfig: RouteObject[] = [
@@ -13,9 +14,8 @@ export const RoutesConfig: RouteObject[] = [
     element: <div>Page Coming Soon</div>,
   },
   {
-    // TODO: Will later be replaced with <NotFound />
     path: RouteIdEnum.NotFound,
-    element: <div>NotFound</div>,
+    element: <NotFoundPage />,
   },
   {
     path: RouteIdEnum.Any,
