@@ -1,6 +1,6 @@
 import { RouteIdEnum } from '@/config';
 import { NotFoundPage } from '@/pages';
-import { Navigate, RouteObject } from 'react-router';
+import { RouteObject } from 'react-router';
 
 export const RoutesConfig: RouteObject[] = [
   {
@@ -19,6 +19,6 @@ export const RoutesConfig: RouteObject[] = [
   },
   {
     path: RouteIdEnum.Any,
-    element: <Navigate to={RouteIdEnum.NotFound} />,
+    element: <NotFoundPage />,
   },
 ];
