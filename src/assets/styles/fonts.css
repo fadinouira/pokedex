@@ -1,7 +1,7 @@
 :root {
-  --font-primary: "Abel", sans-serif;
-  --font-secondary: "Roboto", sans-serif;
-  --font-display: "Single Day", sans-serif;
+  --font-primary: 'Abel', sans-serif;
+  --font-secondary: 'Roboto', sans-serif;
+  --font-display: 'Single Day', sans-serif;
 
   --font-size-xs: 0.875rem;
   --font-size-sm: 1rem;
