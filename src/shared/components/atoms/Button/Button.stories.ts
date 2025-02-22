@@ -4,7 +4,7 @@ import { Button } from './Button';
 import { ButtonProps, ButtonSize, ButtonVariant } from './Button.type';
 
 const meta: Meta<ButtonProps> = {
-  title: 'Example/Button',
+  title: 'Components/Atoms/Button',
   component: Button,
   parameters: {
     layout: 'centered',
