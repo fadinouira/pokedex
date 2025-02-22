@@ -1,9 +1,15 @@
 import './Button.css';
 import { ButtonProps } from './Button.type';
 
-export function Button({ label, children, ...props }: ButtonProps) {
+export function Button({
+  label,
+  children,
+  variant = 'primary',
+  size = 'medium',
+  ...props
+}: ButtonProps) {
   return (
-    <button type="button" {...props}>
+    <button type="button" className={[variant, size].join(' ')} {...props}>
       {label ?? children}
     </button>
   );

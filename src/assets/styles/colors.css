@@ -1,5 +1,8 @@
 :root {
   --color-brand-primary: #fe5858;
+  --color-brand-primary-hover: #e04e4e;
+  --color-brand-primary-foreground: #ffffff;
+  --color-brand-primary-disabled: #f8bcbc;
 
   --color-bg-default: #fafafa;
   --color-bg-light: #ffffff;
