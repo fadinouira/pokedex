@@ -5,6 +5,7 @@ export const COLORS_TOKENS = [
   'brand-primary-disabled',
   'bg-default',
   'bg-light',
+  'text-strong',
   'text-default',
   'text-muted',
   'text-disabled',

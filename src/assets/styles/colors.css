@@ -8,11 +8,12 @@
   --color-bg-light: #ffffff;
 
   --color-text-default: #4f4f4f;
+  --color-text-strong: #333333;
   --color-text-label: #767676;
   --color-text-muted: #757575;
   --color-text-disabled: #9e9e9e;
 
   --color-border-default: #595854;
-  --color-border-muted: #bdbdbd;
+  --color-border-muted: #cfc7c2;
   --color-border-disabled: #d6d6d6;
 }
