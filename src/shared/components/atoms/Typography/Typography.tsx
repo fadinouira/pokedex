@@ -2,7 +2,7 @@ import { generateStyleToken } from '@/shared/utils';
 import { useMemo } from 'react';
 import { TypographyProps } from './Typography.type';
 
-function Typography({
+export function Typography({
   component = 'div',
   label,
   children,
@@ -38,5 +38,3 @@ function Typography({
     </Tag>
   );
 }
-
-export default Typography;

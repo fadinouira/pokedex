@@ -27,7 +27,7 @@
   transform: rotate(-90deg);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .arrow-icon {
     width: 32px;
   }

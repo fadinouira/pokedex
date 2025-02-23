@@ -1,3 +1,4 @@
+import useSmartGoBack from '@/shared/hooks/useSmartGoBack';
 import { generateStyleToken } from '@/shared/utils';
 import { ArrowButton } from '../../atoms';
 import './PageContainer.css';
@@ -8,6 +9,8 @@ export function PageContainer({
   backgroundColor = 'bg-default',
   showBackButton = true,
 }: PageContainerProps) {
+  const { handleGoBack } = useSmartGoBack();
+
   return (
     <div
       className={['page-container'].join(' ')}
@@ -15,7 +18,7 @@ export function PageContainer({
         backgroundColor: generateStyleToken('color', backgroundColor),
       }}
     >
-      {showBackButton && <ArrowButton className="page-container-button" />}
+      {showBackButton && <ArrowButton onClick={handleGoBack} className="page-container-button" />}
       <div className={['page-container-content'].join(' ')}>{children}</div>
     </div>
   );

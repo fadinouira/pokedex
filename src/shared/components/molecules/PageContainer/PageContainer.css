@@ -12,7 +12,7 @@
   left: 5%;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .page-container-button {
     top: 55px;
   }
