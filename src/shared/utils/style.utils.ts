@@ -1,8 +1,8 @@
-import { ColorToken, StyleTokenType } from '../types';
+import { ColorToken, FontToken, StyleTokenType } from '../types';
 
 export const generateStyleToken = (
   tokenType: StyleTokenType,
-  token?: ColorToken,
+  token?: ColorToken | FontToken,
 ): string | undefined => {
   return token ? `var(--${tokenType}-${token})` : undefined;
 };
