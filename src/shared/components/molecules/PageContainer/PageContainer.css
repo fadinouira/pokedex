@@ -1,0 +1,25 @@
+.page-container {
+  position: relative;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding-inline: 4%;
+  padding-top: 172px;
+}
+
+.page-container-button {
+  position: absolute;
+  top: 77px;
+  left: 5%;
+}
+
+@media (max-width: 1024px) {
+  .page-container-button {
+    top: 55px;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-container-button {
+    top: 40px;
+  }
+}

@@ -11,6 +11,10 @@
   opacity: 0.9;
 }
 
+.arrow-icon {
+  width: 39px;
+}
+
 .arrow-right .arrow-icon {
   transform: rotate(180deg);
 }
@@ -21,4 +25,16 @@
 
 .arrow-down .arrow-icon {
   transform: rotate(-90deg);
+}
+
+@media (max-width: 1024px) {
+  .arrow-icon {
+    width: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .arrow-icon {
+    width: 24px;
+  }
 }
