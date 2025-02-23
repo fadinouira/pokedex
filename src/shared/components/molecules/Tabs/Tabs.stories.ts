@@ -50,7 +50,7 @@ const meta: Meta<TabsProps> = {
         defaultValue: { summary: 'brand-primary-foreground' },
       },
     },
-    backgroundColor: {
+    foregroundColor: {
       control: 'select',
       options: COLORS_TOKENS,
       description: 'Defines the background color of the Tabs using color tokens.',
@@ -66,30 +66,21 @@ export default meta;
 
 export const Default: StoryObj<TabsProps> = {
   args: {
-    items: [
-      { label: 'Tab 1', content: 'Content for Tab 1' },
-      { label: 'Tab 2', content: 'Content for Tab 2' },
-    ],
+    items: [{ label: 'Tab 1' }, { label: 'Tab 2' }],
   },
 };
 
 export const WithCustomColors: StoryObj<TabsProps> = {
   args: {
-    items: [
-      { label: 'Tab 1', content: 'Content for Tab 1' },
-      { label: 'Tab 2', content: 'Content for Tab 2' },
-    ],
+    items: [{ label: 'Tab 1' }, { label: 'Tab 2' }],
     color: 'text-default',
-    backgroundColor: 'brand-primary-disabled',
+    foregroundColor: 'brand-primary-disabled',
   },
 };
 
 export const LargeTabs: StoryObj<TabsProps> = {
   args: {
-    items: [
-      { label: 'Tab 1', content: 'Content for Tab 1' },
-      { label: 'Tab 2', content: 'Content for Tab 2' },
-    ],
+    items: [{ label: 'Tab 1' }, { label: 'Tab 2' }],
     size: 'large',
   },
 };
