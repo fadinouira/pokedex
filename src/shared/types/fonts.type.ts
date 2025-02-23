@@ -4,7 +4,7 @@ import {
   FONT_WEIGHT_TOKENS,
   LETTER_SPACING_TOKENS,
   LINE_HEIGHT_TOKENS,
-} from '@/config';
+} from '@/app/config';
 
 export type FontNameToken = (typeof FONT_TOKENS)[number];
 

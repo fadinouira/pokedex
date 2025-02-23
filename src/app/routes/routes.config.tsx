@@ -1,4 +1,4 @@
-import { RouteIdEnum } from '@/config';
+import { RouteIdEnum } from '@/app/config';
 import { NotFoundPage } from '@/pages';
 import { RouteObject } from 'react-router';
 
