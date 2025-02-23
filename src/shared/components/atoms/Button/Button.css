@@ -15,7 +15,7 @@ button {
     border-color var(--motion-medium) ease;
 }
 
-.small {
+button.small {
   padding: 6px 16px;
   min-width: 80px;
 
@@ -23,7 +23,7 @@ button {
   line-height: var(--line-height-xs);
 }
 
-.medium {
+button.medium {
   padding: 10px 25px;
   min-width: 116px;
 
@@ -31,7 +31,7 @@ button {
   line-height: var(--line-height-xs);
 }
 
-.large {
+button.large {
   padding: 14px 32px;
   min-width: 150px;
 
@@ -39,24 +39,24 @@ button {
   line-height: var(--line-height-sm);
 }
 
-.primary {
+button.primary {
   background-color: var(--color-brand-primary);
   border: 1px solid var(--color-brand-primary);
   color: var(--color-brand-primary-foreground);
 }
 
-.primary:hover,
-.primary:focus-visible {
+button.primary:hover,
+button.primary:focus-visible {
   background-color: var(--color-brand-primary-hover,);
 }
 
-.primary:disabled {
+button.primary:disabled {
   background-color: var(--color-brand-primary-disabled);
   cursor: not-allowed;
-  opacity: 0.6;
+  opacity: 0button.6;
 }
 
-.primary:focus-visible {
+button.primary:focus-visible {
   outline: 1px solid var(--color-brand-primary);
   outline-offset: 1px;
 }

@@ -22,26 +22,26 @@ input:focus-visible {
 input:disabled {
   border: 1px solid var(--color-border-disabled);
   cursor: not-allowed;
-  opacity: 0.6;
+  opacity: 0input.6;
 }
 
-.default {
+input.default {
   border: 1px solid var(--color-border-muted);
 }
 
-.small {
+input.small {
   padding: 4px 16px;
   font-size: var(--font-size-xs);
   line-height: var(--line-height-xs);
 }
 
-.medium {
+input.medium {
   padding: 8px 16px;
   font-size: var(--font-size-sm);
   line-height: var(--line-height-sm);
 }
 
-.large {
+input.large {
   padding: 21px 16px;
   font-size: var(--font-size-md);
   line-height: var(--line-height-md);

@@ -1,4 +1,4 @@
-.tag {
+.tag.tag {
   border-radius: var(--radius-full);
 
   font-family: var(--font-primary);
@@ -9,17 +9,17 @@
   text-align: center;
 }
 
-.small {
-  padding: 6px 20px;
+.tag.small {
+  padding: 2px 8px;
   font-size: var(--font-size-xs);
 }
 
-.medium {
-  padding: 8px 30px;
+.tag.medium {
+  padding: 6px 20px;
   font-size: var(--font-size-sm);
 }
 
-.large {
+.tag.large {
   padding: 11px 40px;
   font-size: var(--font-size-md);
   min-width: 162px;
