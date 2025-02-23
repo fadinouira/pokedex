@@ -1,4 +1,4 @@
-import { COLORS_TOKENS } from '@/config';
+import { COLORS_TOKENS } from '@/app/config';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Tag } from './Tag';
 import { TagProps } from './Tag.type';

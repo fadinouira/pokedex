@@ -5,7 +5,7 @@ import {
   FONT_WEIGHT_TOKENS,
   LETTER_SPACING_TOKENS,
   LINE_HEIGHT_TOKENS,
-} from '@/config';
+} from '@/app/config';
 import type { Meta, StoryObj } from '@storybook/react';
 import Typography from './Typography';
 import { TypographyProps } from './Typography.type';
