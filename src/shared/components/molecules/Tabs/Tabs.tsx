@@ -1,21 +1,15 @@
 import { generateStyleToken } from '@/shared/utils';
-import { useState } from 'react';
 import './Tabs.css';
 import { TabItem, TabsProps } from './Tabs.type';
 
 export function Tabs({
   items,
-  defaultActiveIndex = 0,
-  size = 'medium',
+  activeIndex = 0,
   color = 'brand-primary',
   foregroundColor = 'brand-primary-foreground',
   onTabChange,
-  ...props
 }: TabsProps) {
-  const [activeIndex, setActiveIndex] = useState(defaultActiveIndex);
-
   const handleTabClick = (index: number) => {
-    setActiveIndex(index);
     onTabChange?.(index);
   };
 
@@ -37,7 +31,7 @@ export function Tabs({
   };
 
   return (
-    <div {...props} className={['tabs-container', size].join(' ')}>
+    <div className={['tabs-container'].join(' ')}>
       <div className="tabs-header">{items.map((item, index) => renderTab(item, index))}</div>
       <div className="tabs-content"></div>
     </div>

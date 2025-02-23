@@ -1,10 +1,8 @@
 import { ColorToken } from '@/shared/types';
-import { HTMLAttributes } from 'react';
 
-export interface TabsProps extends HTMLAttributes<HTMLDivElement> {
+export interface TabsProps {
   items: TabItem[];
-  defaultActiveIndex?: number;
-  size?: TabSize;
+  activeIndex?: number;
   color?: ColorToken;
   foregroundColor?: ColorToken;
   onTabChange?: (index: number) => void;
@@ -12,6 +10,5 @@ export interface TabsProps extends HTMLAttributes<HTMLDivElement> {
 
 export interface TabItem {
   label: string;
+  path?: string;
 }
-
-export type TabSize = 'small' | 'medium' | 'large';

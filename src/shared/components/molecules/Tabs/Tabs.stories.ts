@@ -24,23 +24,6 @@ const meta: Meta<TabsProps> = {
         type: { summary: 'TabItem[]' },
       },
     },
-    defaultActiveIndex: {
-      control: 'number',
-      description: 'Defines the default active tab index.',
-      table: {
-        type: { summary: 'number' },
-        defaultValue: { summary: '0' },
-      },
-    },
-    size: {
-      control: 'select',
-      options: ['small', 'medium', 'large'],
-      description: 'Defines the size of the Tabs.',
-      table: {
-        type: { summary: 'TabSize' },
-        defaultValue: { summary: 'medium' },
-      },
-    },
     color: {
       control: 'select',
       options: COLORS_TOKENS,
@@ -75,12 +58,5 @@ export const WithCustomColors: StoryObj<TabsProps> = {
     items: [{ label: 'Tab 1' }, { label: 'Tab 2' }],
     color: 'text-default',
     foregroundColor: 'brand-primary-disabled',
-  },
-};
-
-export const LargeTabs: StoryObj<TabsProps> = {
-  args: {
-    items: [{ label: 'Tab 1' }, { label: 'Tab 2' }],
-    size: 'large',
   },
 };
