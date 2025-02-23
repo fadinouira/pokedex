@@ -13,7 +13,7 @@ export function ArrowButton({
       {...props}
       className={['arrow-button', `arrow-${direction}`, props.className].join(' ')}
     >
-      <ArrowIcon width="39px" className="arrow-icon" fill={generateStyleToken('color', color)} />
+      <ArrowIcon className="arrow-icon" fill={generateStyleToken('color', color)} />
     </button>
   );
 }
