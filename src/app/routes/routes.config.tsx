@@ -1,12 +1,12 @@
 import { RouteIdEnum } from '@/app/config';
 import { NotFoundPage } from '@/pages';
 import { RouteObject } from 'react-router';
+import { SearchPokemonPage } from '../features';
 
 export const RoutesConfig: RouteObject[] = [
   {
     path: RouteIdEnum.Root,
-    // TODO: Will later be replaced with <Home />
-    element: <div>Page Coming Soon</div>,
+    element: <SearchPokemonPage />,
   },
   {
     path: RouteIdEnum.Pokemon,

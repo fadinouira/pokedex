@@ -1,0 +1,12 @@
+.pokeball {
+  width: 94px;
+  height: 94px;
+  margin-inline: auto;
+}
+
+.pokeball-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 16px;
+}
