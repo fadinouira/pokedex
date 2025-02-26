@@ -19,3 +19,11 @@
   flex-direction: row;
   align-items: center;
 }
+
+.pokemon-evolutions__item:not(:last-child) .pokemon-evolutions__label {
+  transform: translateX(-49px);
+}
+
+.pokemon-evolutions__item:last-child .pokemon-evolutions__separator {
+  display: none;
+}
