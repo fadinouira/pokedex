@@ -1,0 +1,20 @@
+:root {
+  --color-pokemon-normal: #a8a87b;
+  --color-pokemon-water: #559edf;
+  --color-pokemon-fire: #ee803b;
+  --color-pokemon-grass: #88be5d;
+  --color-pokemon-electric: #f7cf43;
+  --color-pokemon-ice: #9ad8d8;
+  --color-pokemon-fighting: #be322e;
+  --color-pokemon-poison: #b563ce;
+  --color-pokemon-ground: #dfbf6e;
+  --color-pokemon-flying: #a893ed;
+  --color-pokemon-psychic: #ec5c89;
+  --color-pokemon-bug: #a8b732;
+  --color-pokemon-rock: #b89f41;
+  --color-pokemon-ghost: #705a97;
+  --color-pokemon-dark: #705849;
+  --color-pokemon-dragon: #7043f4;
+  --color-pokemon-steel: #b8b9cf;
+  --color-pokemon-fairy: #efb7bd;
+}
