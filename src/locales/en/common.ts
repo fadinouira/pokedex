@@ -5,4 +5,5 @@ export const common = {
   search: 'Search',
 
   not_found: 'Not found',
+  swh: 'Something wrong happened',
 };

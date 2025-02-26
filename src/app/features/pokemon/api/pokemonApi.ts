@@ -1,5 +1,5 @@
-import { APP_CONFIG, ENDPOINTS } from '@/app/config';
-import { joinPaths } from '@/shared';
+import { APP_CONFIG, ENDPOINTS, StatusCodesEnum } from '@/app/config';
+import { CustomError, joinPaths } from '@/shared';
 import { Pokemon, PokemonEvolutionType } from '../types';
 import { transformApiPokemon, transformDescription } from './pokemonApi.transform';
 import { ApiPokemonSpecies } from './pokemonApi.type';
@@ -7,14 +7,19 @@ import { ApiPokemonSpecies } from './pokemonApi.type';
 const fetchPokemonData = async (identifier: string) => {
   const url = joinPaths([APP_CONFIG.BASE_URL_API, ENDPOINTS.pokemon, identifier]);
   const response = await fetch(url);
-  if (!response.ok) throw new Error(`Failed to fetch Pokémon data: ${response.status}`);
-  return response.json();
+  if (!response.ok) {
+    throw new CustomError('Failed to fetch PokemonData', response.status as StatusCodesEnum);
+  }
+  const data = await response.json();
+  return data;
 };
 
 const fetchPokemonSpecies = async (identifier: string) => {
   const url = joinPaths([APP_CONFIG.BASE_URL_API, ENDPOINTS.pokemonSpecies, identifier]);
   const response = await fetch(url);
-  if (!response.ok) throw new Error(`Failed to fetch Pokémon species: ${response.status}`);
+  if (!response.ok) {
+    throw new CustomError('Failed to fetch PokemonSpecies', response.status as StatusCodesEnum);
+  }
   const speciesData = (await response.json()) as ApiPokemonSpecies;
 
   return speciesData;
@@ -25,7 +30,9 @@ const fetchEvolutionChain = async (
 ): Promise<PokemonEvolutionType[]> => {
   if (!speciesData.evolution_chain?.url) return [];
   const response = await fetch(speciesData.evolution_chain.url);
-  if (!response.ok) throw new Error(`Failed to fetch evolution chain: ${response.status}`);
+  if (!response.ok) {
+    throw new CustomError('Failed to fetch EvolutionChain', response.status as StatusCodesEnum);
+  }
   const evolutionData = await response.json();
 
   const evolutions = [];
@@ -47,10 +54,9 @@ export const getPokemonByNameOrId = async (options: {
   lng: string;
 }): Promise<Pokemon> => {
   try {
-    const [pokemonData, speciesData] = await Promise.all([
-      fetchPokemonData(options.identifier),
-      fetchPokemonSpecies(options.identifier),
-    ]);
+    const pokemonData = await fetchPokemonData(options.identifier);
+
+    const speciesData = await fetchPokemonSpecies(options.identifier);
 
     const evolutions = await fetchEvolutionChain(speciesData);
     const pokemon: Pokemon = {
@@ -62,6 +68,6 @@ export const getPokemonByNameOrId = async (options: {
     return pokemon;
   } catch (error) {
     console.error('Error fetching Pokémon:', error);
-    throw error;
+    throw error as CustomError | unknown;
   }
 };
