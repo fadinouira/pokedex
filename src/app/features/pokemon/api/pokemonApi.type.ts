@@ -48,3 +48,26 @@ export interface ApiOtherSprites {
   home: ApiSprites;
   'official-artwork': ApiSprites;
 }
+
+export interface ApiPokemonSpecies {
+  evolution_chain: {
+    url: string;
+  };
+  flavor_text_entries: ApiFlavorTextEntry[];
+}
+
+export interface ApiFlavorTextEntry {
+  flavor_text: string;
+  language: ApiLanguage;
+  version: ApiVersion;
+}
+
+export interface ApiLanguage {
+  name: string;
+  url: string;
+}
+
+export interface ApiVersion {
+  name: string;
+  url: string;
+}
