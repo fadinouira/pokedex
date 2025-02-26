@@ -1,4 +1,5 @@
 import { PageContainer } from '@/shared';
+import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router';
 import { useGetPokemon } from '../../api';
@@ -10,11 +11,16 @@ export function ViewPokemonPage() {
   const { id } = useParams<{ id: string }>();
   const { i18n } = useTranslation();
 
+  const options = useMemo(
+    () => ({
+      identifier: id ?? '',
+      lng: i18n.language,
+    }),
+    [id, i18n.language],
+  );
+
   // TODO: Add a skipToken to useQuery hook
-  const { data, isLoading } = useGetPokemon({
-    identifier: id ?? '',
-    lng: i18n.language,
-  });
+  const { data, isLoading } = useGetPokemon(options);
 
   if (isLoading) {
     return <LoadingPokemonPage />;

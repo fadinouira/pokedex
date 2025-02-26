@@ -31,7 +31,7 @@ const fetchEvolutionChain = async (
   const evolutions = [];
   let current = evolutionData.chain;
   let order = 1;
-  while (current) {
+  while (current && order < 10) {
     const name = current.species.name;
     const spriteData = await fetchPokemonData(name);
     const image = spriteData.sprites.other['official-artwork'].front_default;
