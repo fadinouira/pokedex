@@ -1,0 +1,12 @@
+.pokemon-card {
+  background-color: var(--color-bg-default);
+  border-top-right-radius: var(--radius-xl);
+  border-top-left-radius: var(--radius-xl);
+  position: relative;
+  padding-top: 85px;
+}
+
+.pokemon-card-title {
+  width: 100%;
+  text-align: center;
+}
