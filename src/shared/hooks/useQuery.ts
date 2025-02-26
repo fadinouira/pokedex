@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export default function useQuery<QueryResponseType, QueryParamsType>(
+export function useQuery<QueryResponseType, QueryParamsType>(
   params: QueryParamsType,
   queryFn: (params: QueryParamsType) => Promise<QueryResponseType>,
 ) {

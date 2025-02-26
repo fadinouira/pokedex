@@ -7,7 +7,7 @@ export function LoadingPokemonPage() {
   const { t } = useTranslation();
 
   return (
-    <PageContainer backgroundColor="brand-primary">
+    <PageContainer backgroundColor="brand-primary" showBackButton={false}>
       <div className="loading-page-content">
         <img src={PokeBallImage} />
         <Typography font="display" color="bg-light" fontSize="xl" lineHeight="xl">
