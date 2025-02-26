@@ -13,13 +13,13 @@ export function PageContainer({
 
   return (
     <div
-      className={['page-container'].join(' ')}
+      className={'page-container'}
       style={{
         backgroundColor: generateStyleToken('color', backgroundColor),
       }}
     >
       {showBackButton && <ArrowButton onClick={handleGoBack} className="page-container-button" />}
-      <div className={['page-container-content'].join(' ')}>{children}</div>
+      {children}
     </div>
   );
 }

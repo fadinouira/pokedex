@@ -43,7 +43,11 @@
   --line-height-sm: 1.4rem;
   --line-height-md: 1.5rem;
   --line-height-lg: 1.6rem;
-  --line-height-xl: 1.75rem;
+  --line-height-xl: 2rem;
+  --line-height-2xl: 2.5rem;
+  --line-height-3xl: 3rem;
+  --line-height-4xl: 3.5rem;
+  --line-height-5xl: 5rem;
 
   --letter-spacing-tight: -0.08px;
   --letter-spacing-normal: 0px;

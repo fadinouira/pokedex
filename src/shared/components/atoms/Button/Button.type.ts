@@ -1,8 +1,8 @@
 import { ButtonHTMLAttributes } from 'react';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant: ButtonVariant;
-  size: ButtonSize;
+  variant?: ButtonVariant;
+  size?: ButtonSize;
   label?: string;
 }
 

@@ -1,0 +1,15 @@
+.search-form-container {
+  width: 100%;
+}
+
+.search-form-label {
+  margin-bottom: 8px;
+}
+
+.search-form-actions {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
