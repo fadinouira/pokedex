@@ -1,6 +1,6 @@
-import { PageContainer } from '@/shared';
+import { LoadingPage } from '@/pages/LoadingPage';
 
 export function ViewPokemonPage() {
   // TODO: Fetch form pokemon API and display result here
-  return <PageContainer>View Pokemon</PageContainer>;
+  return <LoadingPage />;
 }
