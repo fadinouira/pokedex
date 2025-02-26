@@ -1,13 +1,15 @@
+import { RouterPaths } from '@/app/config';
+import Background from '@/shared/assets/images/pokemon-background.png';
 import { useNavigate } from 'react-router';
 import { SearchCard, SearchFormType } from '../../components';
-import Background from '@/shared/assets/images/pokemon-background.png';
 import './SearchPokemonPage.css';
 
 export function SearchPokemonPage() {
   const navigate = useNavigate();
 
   const handleSearch = (data: SearchFormType) => {
-    navigate(data.pokemonIdentifier);
+    const searchedPokemonPath = RouterPaths.PokemonPaths.pokemonViewPath(data.pokemonIdentifier);
+    navigate(searchedPokemonPath);
   };
 
   return (
