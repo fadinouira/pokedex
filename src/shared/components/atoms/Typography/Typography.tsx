@@ -14,6 +14,7 @@ export function Typography({
   fontWeight,
   lineHeight,
   letterSpacing,
+  uppercase,
   capitalize,
   capitalizeFirstLetter,
   centerText,
@@ -26,6 +27,7 @@ export function Typography({
     <Tag
       className={`
         ${capitalize ? 'typography-capitalize' : ''} 
+        ${uppercase ? 'typography-uppercase' : ''} 
         ${capitalizeFirstLetter ? 'typography-capitalize-first-letter::first-letter' : ''}  
         ${centerText ? 'typography-center-text' : ''}  
         ${className}`}

@@ -1,7 +1,7 @@
 .progress-indicator {
-  min-width: 200px;
+  min-width: 150px;
   width: 100%;
-  display: inline-block;
+  display: flex;
 }
 
 .progress-indicator__track {

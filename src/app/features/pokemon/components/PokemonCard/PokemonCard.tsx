@@ -1,13 +1,19 @@
 import { Tabs, Typography } from '@/shared';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { generateColorTokenByTypeName } from '../../utils';
 import { POKEMON_CARD_TABS } from './PokemonCard.constants';
 import './PokemonCard.css';
 import { PokemonCardProps } from './PokemonCard.type';
+import { PokemonStats } from './PokemonStats';
 import { PokemonTypes } from './PokemonTypes';
 
 export function PokemonCard({ pokemon }: PokemonCardProps) {
   const [activeTab, setActiveTab] = useState(0);
+
+  const pokemonColor = useMemo(
+    () => generateColorTokenByTypeName(pokemon.types[0].name),
+    [pokemon.types],
+  );
 
   return (
     <div className="pokemon-card">
@@ -30,10 +36,11 @@ export function PokemonCard({ pokemon }: PokemonCardProps) {
         <Tabs
           activeIndex={activeTab}
           items={POKEMON_CARD_TABS}
-          color={generateColorTokenByTypeName(pokemon.types[0].name)}
+          color={pokemonColor}
           onTabChange={(t) => setActiveTab(t)}
         />
       </div>
+      <PokemonStats stats={pokemon.stats} color={pokemonColor} />
     </div>
   );
 }

@@ -1,0 +1,16 @@
+.pokemon-stat-item {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+}
+
+.pokemon-stat-item__label {
+  width: 30px;
+  height: 15px;
+}
+
+.pokemon-stat-item__indicator {
+  flex: 1;
+}

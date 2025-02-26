@@ -17,6 +17,7 @@ export interface TypographyProps extends HTMLAttributes<HTMLDivElement> {
   fontWeight?: FontWeightToken;
   lineHeight?: LineHeightToken;
   letterSpacing?: LetterSpacingToken;
+  uppercase?: boolean;
   capitalize?: boolean;
   capitalizeFirstLetter?: boolean;
   centerText?: boolean;
