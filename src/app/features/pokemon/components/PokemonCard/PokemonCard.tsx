@@ -4,6 +4,7 @@ import { generateColorTokenByTypeName } from '../../utils';
 import { POKEMON_CARD_TABS } from './PokemonCard.constants';
 import './PokemonCard.css';
 import { PokemonCardProps } from './PokemonCard.type';
+import { PokemonEvolution } from './PokemonEvolution';
 import { PokemonStats } from './PokemonStats';
 import { PokemonTypes } from './PokemonTypes';
 
@@ -41,6 +42,7 @@ export function PokemonCard({ pokemon }: PokemonCardProps) {
         />
       </div>
       <PokemonStats stats={pokemon.stats} color={pokemonColor} />
+      <PokemonEvolution evolutions={pokemon.evolutions} />
     </div>
   );
 }

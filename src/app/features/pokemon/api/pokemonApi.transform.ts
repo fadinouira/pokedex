@@ -31,6 +31,7 @@ export function transformApiPokemon(apiPokemon: ApiPokemon): Pokemon {
     isDefault: apiPokemon.is_default,
     baseExperience: apiPokemon.base_experience,
     order: apiPokemon.order,
+    evolutions: [],
     stats: apiPokemon.stats.map(transformPokemonStat),
     types: apiPokemon.types.map(transformPokemonType),
   };

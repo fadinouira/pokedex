@@ -1,3 +1,4 @@
+import { PokemonEvolutionType } from './PokemonEvolutionType';
 import { PokemonStat } from './PokemonStat';
 import { PokemonType } from './PokemonType';
 
@@ -16,4 +17,5 @@ export interface Pokemon {
 
   stats: PokemonStat[];
   types: PokemonType[];
+  evolutions: PokemonEvolutionType[];
 }
