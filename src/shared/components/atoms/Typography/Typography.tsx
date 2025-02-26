@@ -1,5 +1,6 @@
 import { generateStyleToken } from '@/shared/utils';
 import { useMemo } from 'react';
+import './Typography.css';
 import { TypographyProps } from './Typography.type';
 
 export function Typography({
@@ -13,6 +14,10 @@ export function Typography({
   fontWeight,
   lineHeight,
   letterSpacing,
+  uppercase,
+  capitalize,
+  capitalizeFirstLetter,
+  centerText,
   style,
   ...props
 }: TypographyProps) {
@@ -20,7 +25,12 @@ export function Typography({
 
   return (
     <Tag
-      className={className}
+      className={`
+        ${capitalize ? 'typography-capitalize' : ''} 
+        ${uppercase ? 'typography-uppercase' : ''} 
+        ${capitalizeFirstLetter ? 'typography-capitalize-first-letter::first-letter' : ''}  
+        ${centerText ? 'typography-center-text' : ''}  
+        ${className}`}
       style={{
         ...style,
         color: color ? generateStyleToken('color', color) : undefined,

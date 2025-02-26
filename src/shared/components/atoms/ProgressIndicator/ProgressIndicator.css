@@ -1,0 +1,32 @@
+.progress-indicator {
+  min-width: 150px;
+  width: 100%;
+  display: flex;
+}
+
+.progress-indicator__track {
+  width: 100%;
+  min-height: 8px;
+  background-color: var(--color-bg-indicator);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+
+.progress-indicator__fill {
+  min-height: 8px;
+  display: flex;
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+  transition: width var(--motion-medium) ease;
+  animation: fillProgress var(--motion-medium) ease forwards;
+}
+
+@keyframes fillProgress {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--current-width);
+  }
+}

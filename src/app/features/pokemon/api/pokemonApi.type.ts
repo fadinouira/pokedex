@@ -11,6 +11,7 @@ export interface ApiPokemon {
 
   stats: ApiPokemonStat[];
   types: ApiPokemonType[];
+  sprites: ApiSprites;
 }
 
 export interface ApiPokemonStat {
@@ -28,4 +29,45 @@ export interface ApiPokemonType {
     name: string;
     url: string;
   };
+}
+
+export interface ApiSprites {
+  front_default: string;
+  back_default: string | null;
+  back_female: string | null;
+  back_shiny: string | null;
+  back_shiny_female: string | null;
+  front_female: string | null;
+  front_shiny: string | null;
+  front_shiny_female: string | null;
+  other: ApiOtherSprites;
+}
+
+export interface ApiOtherSprites {
+  dream_world: ApiSprites;
+  home: ApiSprites;
+  'official-artwork': ApiSprites;
+}
+
+export interface ApiPokemonSpecies {
+  evolution_chain: {
+    url: string;
+  };
+  flavor_text_entries: ApiFlavorTextEntry[];
+}
+
+export interface ApiFlavorTextEntry {
+  flavor_text: string;
+  language: ApiLanguage;
+  version: ApiVersion;
+}
+
+export interface ApiLanguage {
+  name: string;
+  url: string;
+}
+
+export interface ApiVersion {
+  name: string;
+  url: string;
 }

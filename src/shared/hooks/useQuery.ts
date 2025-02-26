@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { CustomError } from '../types';
 
 export function useQuery<QueryResponseType, QueryParamsType>(
   params: QueryParamsType,
@@ -7,7 +8,7 @@ export function useQuery<QueryResponseType, QueryParamsType>(
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [isFetching, setIsFetching] = useState<boolean>(false);
   const [data, setData] = useState<QueryResponseType>();
-  const [error, setError] = useState<unknown>();
+  const [error, setError] = useState<CustomError>();
 
   useEffect(() => {
     onFetchQuery();
@@ -18,10 +19,11 @@ export function useQuery<QueryResponseType, QueryParamsType>(
       setIsFetching(true);
       const newData = await queryFn(params);
       setData(newData);
+    } catch (e) {
+      setError(e as CustomError);
+    } finally {
       setIsLoading(false);
       setIsFetching(false);
-    } catch (e) {
-      setError(e);
     }
   };
 

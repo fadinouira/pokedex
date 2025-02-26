@@ -9,7 +9,13 @@ export function PokemonNotFoundPage() {
   return (
     <PageContainer backgroundColor="brand-primary">
       <div className="not-found-page-content">
-        <Typography font="display" color="bg-light" fontSize="5xl" lineHeight="5xl">
+        <Typography
+          className="not-found-page-label"
+          font="display"
+          color="bg-light"
+          fontSize="5xl"
+          lineHeight="5xl"
+        >
           {t('pokemon.not_found')}
         </Typography>
         <img src={NotFoundImage} />

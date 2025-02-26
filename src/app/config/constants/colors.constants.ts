@@ -5,6 +5,7 @@ export const APP_COLORS_TOKENS = [
   'brand-primary-disabled',
   'bg-default',
   'bg-light',
+  'bg-indicator',
   'text-strong',
   'text-default',
   'text-muted',
@@ -13,7 +14,7 @@ export const APP_COLORS_TOKENS = [
   'border-default',
   'border-muted',
   'border-disabled',
-];
+] as const;
 
 export const POKEMON_COLOR_TOKENS = [
   'pokemon-normal',
@@ -34,6 +35,6 @@ export const POKEMON_COLOR_TOKENS = [
   'pokemon-dragon',
   'pokemon-steel',
   'pokemon-fairy',
-];
+] as const;
 
 export const COLORS_TOKENS = [...APP_COLORS_TOKENS, ...POKEMON_COLOR_TOKENS] as const;

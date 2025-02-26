@@ -7,7 +7,7 @@ import {
   LINE_HEIGHT_TOKENS,
 } from '@/app/config';
 import type { Meta, StoryObj } from '@storybook/react';
-import Typography from './Typography';
+import { Typography } from './Typography';
 import { TypographyProps } from './Typography.type';
 
 const meta: Meta<TypographyProps> = {

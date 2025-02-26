@@ -1,0 +1,15 @@
+.typography-capitalize {
+  text-transform: capitalize;
+}
+
+.typography-uppercase {
+  text-transform: uppercase;
+}
+
+.typography-capitalize-first-letter::first-letter {
+  text-transform: uppercase;
+}
+
+.typography-center-text {
+  text-align: center;
+}
