@@ -1,4 +1,4 @@
-.page-content {
+.not-found-page-content {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,20 +8,20 @@
   width: 100%;
 }
 
-.page-content img {
+.not-found-page-content img {
   width: 360px;
   height: 470px;
 }
 
 @media (max-width: 1200px) {
-  .page-content img {
+  .not-found-page-content img {
     width: 240px;
     height: 320px;
   }
 }
 
 @media (max-width: 640px) {
-  .page-content img {
+  .not-found-page-content img {
     width: 150px;
     height: 200px;
   }

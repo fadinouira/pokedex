@@ -1,0 +1,35 @@
+.loading-page-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+  width: 100%;
+  margin-top: 20vh;
+}
+
+.loading-page-content img {
+  animation: rotation 2s infinite linear;
+}
+
+.loading-page-content img {
+  width: 70px;
+  height: 70px;
+}
+
+@media (max-width: 1200px) {
+  .loading-page-content img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

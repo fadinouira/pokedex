@@ -1,7 +1,7 @@
-import { RouteIdEnum } from '@/app/config';
+import { RouteIdEnum, RouterPaths } from '@/app/config';
 import { NotFoundPage } from '@/pages';
-import { RouteObject } from 'react-router';
-import { SearchPokemonPage } from '../features';
+import { Navigate, RouteObject } from 'react-router';
+import { PokemonNotFoundPage, SearchPokemonPage, ViewPokemonPage } from '../features';
 
 export const RoutesConfig: RouteObject[] = [
   {
@@ -10,8 +10,20 @@ export const RoutesConfig: RouteObject[] = [
   },
   {
     path: RouteIdEnum.Pokemon,
-    // TODO: Will later be replaced with <Pokemon />
-    element: <div>Page Coming Soon</div>,
+    children: [
+      {
+        path: RouteIdEnum.id,
+        element: <ViewPokemonPage />,
+      },
+      {
+        path: RouteIdEnum.Root,
+        element: <Navigate to={RouterPaths.RootPaths.rootPath} />,
+      },
+      {
+        path: RouteIdEnum.Any,
+        element: <PokemonNotFoundPage />,
+      },
+    ],
   },
   {
     path: RouteIdEnum.NotFound,
