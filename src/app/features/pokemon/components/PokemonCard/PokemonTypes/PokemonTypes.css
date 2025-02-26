@@ -1,0 +1,5 @@
+.pokemon-types {
+  display: flex;
+  gap: 55px;
+  padding: 7px;
+}

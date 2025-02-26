@@ -1,4 +1,5 @@
 import { generateStyleToken } from '@/shared/utils';
+import { useTranslation } from 'react-i18next';
 import './Tabs.css';
 import { TabItem, TabsProps } from './Tabs.type';
 
@@ -9,6 +10,8 @@ export function Tabs({
   foregroundColor = 'brand-primary-foreground',
   onTabChange,
 }: TabsProps) {
+  const { t } = useTranslation();
+
   const handleTabClick = (index: number) => {
     onTabChange?.(index);
   };
@@ -25,7 +28,7 @@ export function Tabs({
         }}
         onClick={() => handleTabClick(index)}
       >
-        {item.label}
+        {t(item.label)}
       </button>
     );
   };

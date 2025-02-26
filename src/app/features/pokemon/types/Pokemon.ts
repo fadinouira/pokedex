@@ -4,7 +4,7 @@ import { PokemonType } from './PokemonType';
 export interface Pokemon {
   id: number;
   name: string;
-  description: true;
+  description: string;
 
   height: number;
   weight: number;

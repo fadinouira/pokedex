@@ -26,6 +26,7 @@
   line-height: var(--line-height-sm);
   letter-spacing: var(--letter-spacing-tight);
   text-align: center;
+  text-transform: capitalize;
 
   padding-block: 9px;
   width: 100%;
