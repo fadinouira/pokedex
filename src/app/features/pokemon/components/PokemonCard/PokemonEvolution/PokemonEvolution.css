@@ -1,0 +1,21 @@
+.pokemon-evolutions {
+  display: flex;
+}
+
+.pokemon-evolutions__item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.pokemon-evolutions__image-item {
+  width: 107px;
+  height: 107px;
+}
+
+.pokemon-evolutions__image-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

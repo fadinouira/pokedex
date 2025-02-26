@@ -16,6 +16,11 @@ export function PokemonCard({ pokemon }: PokemonCardProps) {
     [pokemon.types],
   );
 
+  const tabs = [
+    <PokemonStats stats={pokemon.stats} color={pokemonColor} />,
+    <PokemonEvolution evolutions={pokemon.evolutions} color={pokemonColor} />,
+  ];
+
   return (
     <div className="pokemon-card">
       <img src={pokemon.image} className="pokemon-card-image" />
@@ -41,8 +46,7 @@ export function PokemonCard({ pokemon }: PokemonCardProps) {
           onTabChange={(t) => setActiveTab(t)}
         />
       </div>
-      <PokemonStats stats={pokemon.stats} color={pokemonColor} />
-      <PokemonEvolution evolutions={pokemon.evolutions} />
+      {tabs[activeTab]}
     </div>
   );
 }
