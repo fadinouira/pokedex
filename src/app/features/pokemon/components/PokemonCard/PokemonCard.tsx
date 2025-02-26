@@ -11,7 +11,8 @@ export function PokemonCard({ pokemon }: PokemonCardProps) {
 
   return (
     <div className="pokemon-card">
-      <Typography font="primary" fontSize="2xl" lineHeight="2xl" capitalize centerText>
+      <img src={pokemon.image} className="pokemon-card-image" />
+      <Typography font="primary" fontSize="3xl" lineHeight="3xl" capitalize centerText>
         {pokemon.name}
       </Typography>
       <PokemonTypes types={pokemon.types} />
