@@ -36,7 +36,6 @@ export function Tabs({
   return (
     <div className={['tabs-container'].join(' ')}>
       <div className="tabs-header">{items.map((item, index) => renderTab(item, index))}</div>
-      <div className="tabs-content"></div>
     </div>
   );
 }

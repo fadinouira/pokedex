@@ -4,6 +4,9 @@
   border-top-left-radius: var(--radius-xl);
   position: relative;
   padding-top: 85px;
+  padding-bottom: 30px;
+  max-width: 1200px;
+  margin-inline: auto;
 
   display: flex;
   flex-direction: column;
@@ -34,6 +37,7 @@
 @media (max-width: 1200px) {
   .pokemon-card {
     padding-top: 60px;
+    min-height: calc(100vh - 120px);
   }
 
   .pokemon-card-image {
@@ -47,6 +51,7 @@
 @media (max-width: 640px) {
   .pokemon-card {
     padding-top: 50px;
+    min-height: calc(100vh - 100px);
   }
 
   .pokemon-card-image {

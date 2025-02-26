@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  padding-bottom: 35px;
 }
 
 .tabs-header {
@@ -39,11 +40,4 @@
 
 .tab-item:hover {
   opacity: 0.9;
-}
-
-.tabs-content {
-  width: 100%;
-  text-align: center;
-  padding: 30px;
-  font-size: var(--font-size-md);
 }

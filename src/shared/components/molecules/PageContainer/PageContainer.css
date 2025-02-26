@@ -13,12 +13,18 @@
 }
 
 @media (max-width: 1200px) {
+  .page-container {
+    padding-top: 120px;
+  }
   .page-container-button {
     top: 55px;
   }
 }
 
 @media (max-width: 640px) {
+  .page-container {
+    padding-top: 100px;
+  }
   .page-container-button {
     top: 40px;
   }
