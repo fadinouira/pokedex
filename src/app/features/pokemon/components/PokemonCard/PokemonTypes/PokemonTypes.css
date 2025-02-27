@@ -1,0 +1,19 @@
+.pokemon-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 55px;
+  padding: 7px;
+}
+
+@media (max-width: 1200px) {
+  .pokemon-types {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .pokemon-types {
+    gap: 5px;
+    justify-content: center;
+  }
+}

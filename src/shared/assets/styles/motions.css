@@ -1,0 +1,5 @@
+:root {
+  --motion-fast: 0.1s;
+  --motion-medium: 0.3s;
+  --motion-slow: 0.6s;
+}

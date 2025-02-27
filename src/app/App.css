@@ -1,0 +1,10 @@
+body {
+  background-color: var(--color-bg-default);
+  color: var(--color-text-default);
+  min-height: 100vh;
+
+  font-family: var(--font-primary);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-md);
+}

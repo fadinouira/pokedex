@@ -1,0 +1,40 @@
+.arrow-button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.arrow-button:hover {
+  opacity: 0.9;
+}
+
+.arrow-icon {
+  width: 39px;
+}
+
+.arrow-right .arrow-icon {
+  transform: rotate(180deg);
+}
+
+.arrow-up .arrow-icon {
+  transform: rotate(90deg);
+}
+
+.arrow-down .arrow-icon {
+  transform: rotate(-90deg);
+}
+
+@media (max-width: 1200px) {
+  .arrow-icon {
+    width: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .arrow-icon {
+    width: 24px;
+  }
+}
