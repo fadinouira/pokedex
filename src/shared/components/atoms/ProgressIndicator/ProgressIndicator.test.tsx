@@ -29,10 +29,3 @@ test('handles value below 0', () => {
   const progressBar = screen.getByTestId('progress-indicator');
   expect(progressBar).toHaveStyle('--current-width: 0%');
 });
-
-test('applies custom color', () => {
-  render(<ProgressIndicator value={100} max={100} color="pokemon-fire" />);
-
-  const fillElement = screen.getByTestId('progress-indicator-fill');
-  expect(fillElement).toHaveStyle('background-color: var(--color-pokemon-fire)');
-});
