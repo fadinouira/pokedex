@@ -9,7 +9,12 @@ export function Button({
   ...props
 }: ButtonProps) {
   return (
-    <button type="button" className={['button', variant, size].join(' ')} {...props}>
+    <button
+      type="button"
+      className={['button', variant, size].join(' ')}
+      {...props}
+      data-testid="button"
+    >
       {label ?? children}
     </button>
   );

@@ -20,6 +20,7 @@ export function ProgressIndicator({
           '--current-width': `${progressPercent}%`,
         } as CSSProperties
       }
+      data-testid="progress-indicator"
     >
       <div className="progress-indicator__track">
         <div
@@ -27,6 +28,7 @@ export function ProgressIndicator({
           style={{
             backgroundColor: generateStyleToken('color', color),
           }}
+          data-testid="progress-indicator-fill"
         />
       </div>
     </div>
